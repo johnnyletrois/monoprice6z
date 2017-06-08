@@ -7,11 +7,17 @@ Implements a Python API for selected commands to the Monoprice system predominan
 ####For a zone:
 
 set_power
+
 set_volume
+
 set_source
+
 toggle_mute
+
 get_power
+
 get_volume
+
 get_source
 
 ####Controller level
