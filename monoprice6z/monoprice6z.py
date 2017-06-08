@@ -1,5 +1,7 @@
 """
-Russound RNT interface (used by models CAS44, CAA66, CAM6.6, CAV6.6)
+Monoprice Six Zone amp interface (used by model 10761)
+
+Based on Russound Rnet controller by Neil Lathwood
 
 Copyright (c) 2014 Neil Lathwood <https://github.com/laf/ http://www.lathwood.co.uk/>
 
@@ -9,8 +11,7 @@ Free Software Foundation, either version 3 of the License, or (at your
 option) any later version.  Please see LICENSE.txt at the top level of
 the source code distribution for details.
 
-The Russound RNET protocol is documented in cav6.6_rnet_protocol_v1.01.00.pdf, and russound-rs-232-V01_00_01.pdf
-which are stored in the source code repo.
+The Monoprice protocol is documented in _____________.pdf, which is stored in the source code repo.
 """
 
 import logging
@@ -24,12 +25,12 @@ COMMAND_DELAY = 0.1
 KEYPAD_CODE = '70'  # For an external system this is the required value (pg 28 of cav6.6_rnet_protocol_v1.01.00.pdf)
 
 
-class Russound:
-    """ Implements a python API for selected commands to the Russound system using the RNET protocol.
-    The class is designed to maintain a connection to the Russound controller, and reads the controller state
-    directly from using RNET"""
+class Monoprice:
+    """ Implements a python API for selected commands to the Monoprice system.
+    The class is designed to maintain a connection to the Monoprice controller, and reads the controller state
+    directly"""
     def __init__(self, host, port):
-        """ Initialise Russound class """
+        """ Initialise Monoprice class """
 
         self._host = host
         self._port = int(port)
@@ -46,10 +47,10 @@ class Russound:
 
         try:
             self.sock.connect((self._host, self._port))
-            _LOGGER.info("Successfully connected to Russound on %s:%s", self._host, self._port)
+            _LOGGER.info("Successfully connected to Monoprice on %s:%s", self._host, self._port)
             return True
         except socket.error as msg:
-            _LOGGER.error("Error trying to connect to Russound controller.")
+            _LOGGER.error("Error trying to connect to Monoprice controller.")
             _LOGGER.error(msg)
             return False
 
