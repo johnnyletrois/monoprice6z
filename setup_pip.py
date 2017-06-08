@@ -1,5 +1,5 @@
 # pylint: disable=invalid-name, exec-used
-"""Setup monoprice package."""
+"""Setup monoprice6z package."""
 from __future__ import absolute_import
 import sys
 import os
@@ -13,7 +13,7 @@ CURRENT_DIR = os.path.dirname(__file__)
 # make pythonpack
 # python setup.py register sdist upload
 # and be sure to test it firstly using "python setup.py register sdist upload -r pypitest"
-setup(name='monoprice',
+setup(name='monoprice6z',
       # version=open(os.path.join(CURRENT_DIR, 'xgboost/VERSION')).read().strip(),
       version='0.0.1',
       description=open(os.path.join(CURRENT_DIR, 'README.md')).read(),
