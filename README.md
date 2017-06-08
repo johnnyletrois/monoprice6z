@@ -1,5 +1,5 @@
 # monoprice6z
-Monoprice Six Zone WHA amp RS232 Python module based on Russound Rnet (https://github.com/laf/russound)
+Monoprice Six Zone WHA amp RS232 Python module based on Russound Rnet (https://github.com/laf/russound | https://pypi.python.org/pypi/russound)
 
 
 Implements a Python API for selected commands to the Monoprice system predominantly developed to provide Monoprice support within home-assistant.io. The class is designed to maintain a connection to the Monoprice controller, and reads the state directly from the controller via serial connection. In principle supported models include the Monoprice 10761. Function to control Monoprice implemented are:
